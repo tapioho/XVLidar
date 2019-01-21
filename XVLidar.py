@@ -7,13 +7,13 @@ class XVLidar:
         All the arithmetics for the data package interpreting are taken from the 'XV Lidar Controller Visual Test'-example,
         which can be found here: https://www.getsurreal.com/xv-lidar-controller-first-release/xv-lidar-controller-visual-test/ """
     
-    # Input arguments for creating a XVLidar object:
-    #   port: name of the port the lidar controller is connected to
-    #   baud (optional): symbol rate (baud) for the communication, 115200 by default
     
     def __init__(self, port, baud=115200):
         """Initialize the serial port and also some variables.
-            Finally, reset the LiDAR (Restores the original configuration)"""     
+            Finally, reset the LiDAR (Restores the original configuration).
+            Input arguments:
+                port: name of the port the lidar controller is connected to
+                baud (optional): symbol rate (baud) for the communication, 115200 by default"""     
             
         # Connect to the serial port
         self.__ser = serial.Serial(port, baud, timeout=1)
